@@ -321,6 +321,25 @@
                   <li>
                     <a href="#add-a-new-reservation" class="toc-h2 toc-link" data-title="Add a new reservation">Add a new reservation</a>
                   </li>
+                  <li>
+                    <a href="#update-reservation" class="toc-h2 toc-link" data-title="Update reservation">Update reservation</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#londonist-reservation-information" class="toc-h1 toc-link" data-title="Londonist Reservation Information">Londonist Reservation Information</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-reservation-information" class="toc-h2 toc-link" data-title="Get Reservation Information">Get Reservation Information</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#dynamic-pricing-operation" class="toc-h1 toc-link" data-title="Dynamic Pricing Operation">Dynamic Pricing Operation</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#room-type-price-update-simulate-for-londonist" class="toc-h2 toc-link" data-title="Room type price update (Simulate for Londonist)">Room type price update (Simulate for Londonist)</a>
+                  </li>
               </ul>
           </li>
           <li>
@@ -330,7 +349,7 @@
                     <a href="#get-all-residence" class="toc-h2 toc-link" data-title="Get all residence">Get all residence</a>
                   </li>
                   <li>
-                    <a href="#get-residence" class="toc-h2 toc-link" data-title="Get residence">Get residence</a>
+                    <a href="#get-residence-by-id" class="toc-h2 toc-link" data-title="Get residence by id">Get residence by id</a>
                   </li>
               </ul>
           </li>
@@ -351,10 +370,11 @@
 <p>We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
 
 <p>This example API documentation page was created with <a href="https://github.com/slatedocs/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
-<h1 id='reservation-operation'>Reservation Operation</h1><h2 id='add-a-new-reservation'>Add a new reservation</h2><div class="highlight"><pre class="highlight java tab-java"><code>
-</code></pre></div>
+<h1 id='reservation-operation'>Reservation Operation</h1><h2 id='add-a-new-reservation'>Add a new reservation</h2>
+<p>Add new reservation endpoint.</p>
+
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Request:</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"sellerReservationId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
@@ -367,15 +387,12 @@
       </span><span class="nl">"age"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
       </span><span class="nl">"nationality"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UK"</span><span class="w">
     </span><span class="p">},</span><span class="w">
-    </span><span class="nl">"residence"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Coopers Court"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nl">"roomType"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Double En-suite"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"sellerResidenceId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"sellerRoomTypeId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"school"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Queen Mary University of London"</span><span class="w">
     </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"reservationSchoolName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Queen Mary University of London"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"reservationStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEPOSIT"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"invoiceStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UNPAID"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"invoices"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -385,6 +402,7 @@
     </span><span class="p">],</span><span class="w">
     </span><span class="nl">"facilities"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
       </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"sellerReservationFacilityId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Double bed (appr. 135cm*190cm)"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">39</span><span class="w">
       </span><span class="p">}</span><span class="w">
@@ -396,11 +414,11 @@
     </span><span class="nl">"totalRoomPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
     </span><span class="nl">"totalFacilityPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
     </span><span class="nl">"refundAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"plannedCheckIn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-17T11:05:58.604Z"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"plannedCheckOut"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-17T11:05:58.604Z"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cancelDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-17T11:05:58.604Z"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"checkIn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-17T11:05:58.604Z"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"checkOut"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-17T11:05:58.604Z"</span><span class="w">
+    </span><span class="nl">"plannedCheckIn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-23T19:57:54.220Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"plannedCheckOut"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-23T19:57:54.220Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"cancelDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-23T19:57:54.220Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"checkIn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-23T19:57:54.220Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"checkOut"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-23T19:57:54.220Z"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"agent"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A Agent"</span><span class="p">,</span><span class="w">
@@ -409,8 +427,17 @@
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
-<p>This endpoint retrieves all kittens.</p>
-<h3 id='http-request'>HTTP Request</h3>
+<blockquote>
+<p>Response:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h3 id='http-request'>HTTP Request</h3>
 <p><code>POST https://bookingapi.pricing-coach.com/api/v1/reservations</code></p>
 <h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
@@ -452,9 +479,292 @@
 <td>Reservation details for every student</td>
 </tr>
 </tbody></table>
-<h1 id='residence-operation'>Residence Operation</h1><h2 id='get-all-residence'>Get all residence</h2><div class="highlight"><pre class="highlight java tab-java"><code></code></pre></div>
+<h2 id='update-reservation'>Update reservation</h2>
+<p>Update an existing reservation. It is called instantly when a new reservation is made or changes are made to the existing reservation.</p>
+
 <blockquote>
-<p>The endpoint  returns JSON structured like this:</p>
+<p>Request:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"sellerReservationId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"issueDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-03T06:42:19.123Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"reservationDetail"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"sellerReservationDetailId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"student"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"sellerStudentId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"gender"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FEMALE"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"age"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"nationality"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UK"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"sellerResidenceId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"sellerRoomTypeId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"school"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Queen Mary University of London"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"reservationSchoolName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Queen Mary University of London"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"reservationStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEPOSIT"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"invoiceStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UNPAID"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"invoices"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"invoiceId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12345"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"facilities"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"sellerReservationFacilityId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Double bed (appr. 135cm*190cm)"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">39</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"depositPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"depositPaidAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"totalPaidAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"totalPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"totalRoomPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"totalFacilityPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"refundAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"plannedCheckIn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-23T20:09:37.559Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"plannedCheckOut"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-23T20:09:37.559Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"cancelDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-23T20:09:37.559Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"checkIn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-23T20:09:37.559Z"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"checkOut"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-23T20:09:37.559Z"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"agent"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A Agent"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A Source"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"responsibleZone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A Zone"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<blockquote>
+<p>Response:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h3 id='http-request-2'>HTTP Request</h3>
+<p><code>PUT https://bookingapi.pricing-coach.com/api/v1/reservations</code></p>
+<h3 id='query-parameters-2'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+</tbody></table>
+
+<p>NO_PARAMS </p>
+<h3 id='schema-2'>Schema</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>type</th>
+<th>example</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>sellerReservationId</td>
+<td>string</td>
+<td>1</td>
+<td>Id of reservation on seller system</td>
+</tr>
+<tr>
+<td>issueDate</td>
+<td>date</td>
+<td>2022-04-03T06:42:19.123Z</td>
+<td></td>
+</tr>
+<tr>
+<td>reservationDetail</td>
+<td>ReservationDetail</td>
+<td></td>
+<td>Reservation details for every student</td>
+</tr>
+</tbody></table>
+<h1 id='londonist-reservation-information'>Londonist Reservation Information</h1>
+<p>Returns reservations made on the londonist system</p>
+<h2 id='get-reservation-information'>Get Reservation Information</h2>
+<p>Return matched reservations</p>
+
+<blockquote>
+<p>Request:
+```json</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>
+&gt; Response:
+
+```json
+[
+  {
+    "sellerReservationId": "1",
+    "issueDate": "2022-04-03T06:42:19.123Z",
+    "reservationDetail": {
+      "sellerReservationDetailId": "1",
+      "student": {
+        "sellerStudentId": 1,
+        "gender": "FEMALE",
+        "age": 20,
+        "nationality": "UK"
+      },
+      "sellerResidenceId": "string",
+      "sellerRoomTypeId": "string",
+      "school": {
+        "name": "Queen Mary University of London"
+      },
+      "reservationSchoolName": "Queen Mary University of London",
+      "reservationStatus": "DEPOSIT",
+      "invoiceStatus": "UNPAID",
+      "invoices": [
+        {
+          "invoiceId": "12345"
+        }
+      ],
+      "facilities": [
+        {
+          "sellerReservationFacilityId": "1",
+          "name": "Double bed (appr. 135cm*190cm)",
+          "price": 39
+        }
+      ],
+      "depositPrice": 0,
+      "depositPaidAmount": 0,
+      "totalPaidAmount": 0,
+      "totalPrice": 0,
+      "totalRoomPrice": 0,
+      "totalFacilityPrice": 0,
+      "refundAmount": 0,
+      "plannedCheckIn": "2022-04-23T20:17:55.498Z",
+      "plannedCheckOut": "2022-04-23T20:17:55.498Z",
+      "cancelDate": "2022-04-23T20:17:55.498Z",
+      "checkIn": "2022-04-23T20:17:55.498Z",
+      "checkOut": "2022-04-23T20:17:55.498Z"
+    },
+    "agent": {
+      "name": "A Agent",
+      "source": "A Source",
+      "responsibleZone": "A Zone"
+    }
+  }
+]
+</code></pre></div><h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET https://bookingapi.pricing-coach.com/api/v1/londonist/reservations/{year}/{month}</code></p>
+<h3 id='query-parameters-3'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>year</td>
+<td>string</td>
+<td>true</td>
+<td>year information</td>
+</tr>
+<tr>
+<td>month</td>
+<td>string</td>
+<td>true</td>
+<td>month information</td>
+</tr>
+</tbody></table>
+<h3 id='schema-3'>Schema</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>type</th>
+<th>example</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+</tbody></table>
+<h1 id='dynamic-pricing-operation'>Dynamic Pricing Operation</h1>
+<p>New prices generated by dynamic pricing algorithm are sent to the system</p>
+<h2 id='room-type-price-update-simulate-for-londonist'>Room type price update (Simulate for Londonist)</h2>
+<p>It updates the price for the specified dates for the selected residence and room type.</p>
+
+<blockquote>
+<p>Request:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"roomTypePriceUpdates"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"sellerResidenceId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"sellerRoomTypeId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">225</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"£"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"year"</span><span class="p">:</span><span class="w"> </span><span class="mi">2022</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"timeUnit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"WEEK"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"timeNumber"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<blockquote>
+<p>Response:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h3 id='http-request-4'>HTTP Request</h3>
+<p><code>PUT https://bookingapi.pricing-coach.com/api/v1/londonist/price</code></p>
+<h3 id='query-parameters-4'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>year</td>
+<td>string</td>
+<td>true</td>
+<td>year information</td>
+</tr>
+<tr>
+<td>month</td>
+<td>string</td>
+<td>true</td>
+<td>month information</td>
+</tr>
+</tbody></table>
+<h3 id='schema-4'>Schema</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>type</th>
+<th>example</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+</tbody></table>
+<h1 id='residence-operation'>Residence Operation</h1>
+<p>It returns information about residences, properties of residences, room types of residences, properties of room types and prices according to weeks.</p>
+<h2 id='get-all-residence'>Get all residence</h2>
+<p>Get all residence (Simulate for Londonist)</p>
+
+<blockquote>
+<p>Request:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre></div>
+<blockquote>
+<p>Response:</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
@@ -471,6 +781,7 @@
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"roomTypes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
       </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"sellerRoomTypeId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Double En-suite"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mile End tube station is a moment’s walk from your student accommodation. Take the tube or bus to universities and colleges, like London School of Economics or University College London."</span><span class="p">,</span><span class="w">
         </span><span class="nl">"roomTypeImages"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -520,11 +831,9 @@
     </span><span class="p">]</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint all residence.</p>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET https://bookingapi.pricing-coach.com/api/v1/residences</code></p>
-<h3 id='query-parameters-2'>Query Parameters</h3>
+</span></code></pre></div><h3 id='http-request-5'>HTTP Request</h3>
+<p><code>GET https://bookingapi.pricing-coach.com/api/v1/londonist/residences</code></p>
+<h3 id='query-parameters-5'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -536,7 +845,7 @@
 </tbody></table>
 
 <p>NO_PARAMS </p>
-<h3 id='schema-2'>Schema</h3>
+<h3 id='schema-5'>Schema</h3>
 <table><thead>
 <tr>
 <th>Name</th>
@@ -546,9 +855,16 @@
 </tr>
 </thead><tbody>
 </tbody></table>
-<h2 id='get-residence'>Get residence</h2><div class="highlight"><pre class="highlight java tab-java"><code></code></pre></div>
+<h2 id='get-residence-by-id'>Get residence by id</h2>
+<p>Get residence with residence id (Simulate for Londonist)</p>
+
 <blockquote>
-<p>The endpoint returns JSON structured like this:</p>
+<p>Request:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre></div>
+<blockquote>
+<p>Response:</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"sellerResidenceId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
@@ -564,6 +880,7 @@
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"roomTypes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"sellerRoomTypeId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Double En-suite"</span><span class="p">,</span><span class="w">
       </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mile End tube station is a moment’s walk from your student accommodation. Take the tube or bus to universities and colleges, like London School of Economics or University College London."</span><span class="p">,</span><span class="w">
       </span><span class="nl">"roomTypeImages"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -612,11 +929,9 @@
     </span><span class="p">}</span><span class="w">
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<p>Get residence with name</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>GET https://bookingapi.pricing-coach.com/api/v1/residences/{name}</code></p>
-<h3 id='query-parameters-3'>Query Parameters</h3>
+</span></code></pre></div><h3 id='http-request-6'>HTTP Request</h3>
+<p><code>GET https://bookingapi.pricing-coach.com/api/v1/londonist/residences/{id}</code></p>
+<h3 id='query-parameters-6'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -626,13 +941,13 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>name</td>
-<td>string(path)</td>
+<td>id</td>
+<td>string</td>
 <td>true</td>
-<td>Residence name</td>
+<td>it&#39;s existing residence id</td>
 </tr>
 </tbody></table>
-<h3 id='schema-3'>Schema</h3>
+<h3 id='schema-6'>Schema</h3>
 <table><thead>
 <tr>
 <th>Name</th>
