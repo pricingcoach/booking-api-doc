@@ -31,11 +31,9 @@ This example API documentation page was created with [Slate](https://github.com/
 
 ## Add a new reservation
 
-```java
+Add new reservation endpoint.
 
-```
-
-> The above command returns JSON structured like this:
+> Request:
 
 ```json
 {
@@ -49,15 +47,12 @@ This example API documentation page was created with [Slate](https://github.com/
       "age": 20,
       "nationality": "UK"
     },
-    "residence": {
-      "name": "Coopers Court"
-    },
-    "roomType": {
-      "name": "Double En-suite"
-    },
+    "sellerResidenceId": "string",
+    "sellerRoomTypeId": "string",
     "school": {
       "name": "Queen Mary University of London"
     },
+    "reservationSchoolName": "Queen Mary University of London",
     "reservationStatus": "DEPOSIT",
     "invoiceStatus": "UNPAID",
     "invoices": [
@@ -67,6 +62,7 @@ This example API documentation page was created with [Slate](https://github.com/
     ],
     "facilities": [
       {
+        "sellerReservationFacilityId": "1",
         "name": "Double bed (appr. 135cm*190cm)",
         "price": 39
       }
@@ -78,11 +74,11 @@ This example API documentation page was created with [Slate](https://github.com/
     "totalRoomPrice": 0,
     "totalFacilityPrice": 0,
     "refundAmount": 0,
-    "plannedCheckIn": "2022-04-17T11:05:58.604Z",
-    "plannedCheckOut": "2022-04-17T11:05:58.604Z",
-    "cancelDate": "2022-04-17T11:05:58.604Z",
-    "checkIn": "2022-04-17T11:05:58.604Z",
-    "checkOut": "2022-04-17T11:05:58.604Z"
+    "plannedCheckIn": "2022-04-23T19:57:54.220Z",
+    "plannedCheckOut": "2022-04-23T19:57:54.220Z",
+    "cancelDate": "2022-04-23T19:57:54.220Z",
+    "checkIn": "2022-04-23T19:57:54.220Z",
+    "checkOut": "2022-04-23T19:57:54.220Z"
   },
   "agent": {
     "name": "A Agent",
@@ -92,7 +88,17 @@ This example API documentation page was created with [Slate](https://github.com/
 }
 ```
 
-This endpoint retrieves all kittens.
+> Response:
+
+```json
+{
+  "message": "string",
+  "status": 0,
+  "success": true,
+  "timestamp": 0,
+  "data": {}
+}
+```
 
 ### HTTP Request
 
@@ -113,13 +119,247 @@ issueDate | date | 2022-04-03T06:42:19.123Z |
 reservationDetail | ReservationDetail |   | Reservation details for every student
 
 
+## Update reservation
+
+Update an existing reservation. It is called instantly when a new reservation is made or changes are made to the existing reservation.
+
+> Request:
+
+```json
+{
+  "sellerReservationId": "1",
+  "issueDate": "2022-04-03T06:42:19.123Z",
+  "reservationDetail": {
+    "sellerReservationDetailId": "1",
+    "student": {
+      "sellerStudentId": 1,
+      "gender": "FEMALE",
+      "age": 20,
+      "nationality": "UK"
+    },
+    "sellerResidenceId": "string",
+    "sellerRoomTypeId": "string",
+    "school": {
+      "name": "Queen Mary University of London"
+    },
+    "reservationSchoolName": "Queen Mary University of London",
+    "reservationStatus": "DEPOSIT",
+    "invoiceStatus": "UNPAID",
+    "invoices": [
+      {
+        "invoiceId": "12345"
+      }
+    ],
+    "facilities": [
+      {
+        "sellerReservationFacilityId": "1",
+        "name": "Double bed (appr. 135cm*190cm)",
+        "price": 39
+      }
+    ],
+    "depositPrice": 0,
+    "depositPaidAmount": 0,
+    "totalPaidAmount": 0,
+    "totalPrice": 0,
+    "totalRoomPrice": 0,
+    "totalFacilityPrice": 0,
+    "refundAmount": 0,
+    "plannedCheckIn": "2022-04-23T20:09:37.559Z",
+    "plannedCheckOut": "2022-04-23T20:09:37.559Z",
+    "cancelDate": "2022-04-23T20:09:37.559Z",
+    "checkIn": "2022-04-23T20:09:37.559Z",
+    "checkOut": "2022-04-23T20:09:37.559Z"
+  },
+  "agent": {
+    "name": "A Agent",
+    "source": "A Source",
+    "responsibleZone": "A Zone"
+  }
+}
+```
+
+> Response:
+
+
+```json
+{
+  "message": "string",
+  "status": 0,
+  "success": true,
+  "timestamp": 0,
+  "data": {}
+}
+```
+
+### HTTP Request
+
+`PUT https://bookingapi.pricing-coach.com/api/v1/reservations`
+
+### Query Parameters
+
+Parameter | Type | Required |  Description
+--------- | ------- | ------- | -----------
+NO_PARAMS 
+
+### Schema
+
+Name | type | example | description
+--------- | ------- | ----------- | -------
+sellerReservationId | string | 1 | Id of reservation on seller system
+issueDate | date | 2022-04-03T06:42:19.123Z | 
+reservationDetail | ReservationDetail |   | Reservation details for every student
+
+# Londonist Reservation Information
+Returns reservations made on the londonist system
+
+##  Get Reservation Information
+Return matched reservations
+
+> Request:
+```json
+
+```
+
+> Response:
+
+```json
+[
+  {
+    "sellerReservationId": "1",
+    "issueDate": "2022-04-03T06:42:19.123Z",
+    "reservationDetail": {
+      "sellerReservationDetailId": "1",
+      "student": {
+        "sellerStudentId": 1,
+        "gender": "FEMALE",
+        "age": 20,
+        "nationality": "UK"
+      },
+      "sellerResidenceId": "string",
+      "sellerRoomTypeId": "string",
+      "school": {
+        "name": "Queen Mary University of London"
+      },
+      "reservationSchoolName": "Queen Mary University of London",
+      "reservationStatus": "DEPOSIT",
+      "invoiceStatus": "UNPAID",
+      "invoices": [
+        {
+          "invoiceId": "12345"
+        }
+      ],
+      "facilities": [
+        {
+          "sellerReservationFacilityId": "1",
+          "name": "Double bed (appr. 135cm*190cm)",
+          "price": 39
+        }
+      ],
+      "depositPrice": 0,
+      "depositPaidAmount": 0,
+      "totalPaidAmount": 0,
+      "totalPrice": 0,
+      "totalRoomPrice": 0,
+      "totalFacilityPrice": 0,
+      "refundAmount": 0,
+      "plannedCheckIn": "2022-04-23T20:17:55.498Z",
+      "plannedCheckOut": "2022-04-23T20:17:55.498Z",
+      "cancelDate": "2022-04-23T20:17:55.498Z",
+      "checkIn": "2022-04-23T20:17:55.498Z",
+      "checkOut": "2022-04-23T20:17:55.498Z"
+    },
+    "agent": {
+      "name": "A Agent",
+      "source": "A Source",
+      "responsibleZone": "A Zone"
+    }
+  }
+]
+```
+
+### HTTP Request
+
+`GET https://bookingapi.pricing-coach.com/api/v1/londonist/reservations/{year}/{month}`
+
+### Query Parameters
+
+Parameter | Type | Required |  Description
+--------- | ------- | ------- | -----------
+year | string | true | year information
+month | string | true | month information
+
+### Schema
+
+Name | type | example | description
+--------- | ------- | ----------- | -------
+
+
+# Dynamic Pricing Operation
+New prices generated by dynamic pricing algorithm are sent to the system
+
+##  Room type price update (Simulate for Londonist)
+It updates the price for the specified dates for the selected residence and room type.
+
+> Request:
+
+```json
+{
+  "roomTypePriceUpdates": [
+    {
+      "sellerResidenceId": "1",
+      "sellerRoomTypeId": "1",
+      "price": 225,
+      "currency": "£",
+      "year": 2022,
+      "timeUnit": "WEEK",
+      "timeNumber": 20
+    }
+  ]
+}
+```
+
+> Response:
+
+```json
+{
+  "message": "string",
+  "status": 0,
+  "success": true,
+  "timestamp": 0,
+  "data": {}
+}
+```
+
+### HTTP Request
+
+`PUT https://bookingapi.pricing-coach.com/api/v1/londonist/price`
+
+### Query Parameters
+
+Parameter | Type | Required |  Description
+--------- | ------- | ------- | -----------
+year | string | true | year information
+month | string | true | month information
+
+### Schema
+
+Name | type | example | description
+--------- | ------- | ----------- | -------
+
+
 # Residence Operation
+It returns information about residences, properties of residences, room types of residences, properties of room types and prices according to weeks.
 
 ## Get all residence 
+Get all residence (Simulate for Londonist)
 
-```java
+> Request:
+
+```json
+
 ```
-> The endpoint  returns JSON structured like this:
+
+> Response:
 
 ```json
 [
@@ -137,6 +377,7 @@ reservationDetail | ReservationDetail |   | Reservation details for every studen
     },
     "roomTypes": [
       {
+        "sellerRoomTypeId": "1",
         "name": "Double En-suite",
         "description": "Mile End tube station is a moment’s walk from your student accommodation. Take the tube or bus to universities and colleges, like London School of Economics or University College London.",
         "roomTypeImages": [
@@ -188,11 +429,9 @@ reservationDetail | ReservationDetail |   | Reservation details for every studen
 ]
 ```
 
-This endpoint all residence.
-
 ### HTTP Request
 
-`GET https://bookingapi.pricing-coach.com/api/v1/residences`
+`GET https://bookingapi.pricing-coach.com/api/v1/londonist/residences`
 
 ### Query Parameters
 
@@ -206,11 +445,16 @@ Name | type | example | description
 --------- | ------- | ----------- | -------
 
 
-## Get residence 
+## Get residence by id 
+Get residence with residence id (Simulate for Londonist)
 
-```java
+> Request:
+
+```json
+
 ```
-> The endpoint returns JSON structured like this:
+
+> Response:
 
 ```json
 {
@@ -227,6 +471,7 @@ Name | type | example | description
   },
   "roomTypes": [
     {
+      "sellerRoomTypeId": "1",
       "name": "Double En-suite",
       "description": "Mile End tube station is a moment’s walk from your student accommodation. Take the tube or bus to universities and colleges, like London School of Economics or University College London.",
       "roomTypeImages": [
@@ -277,20 +522,17 @@ Name | type | example | description
 }
 ```
 
-Get residence with name
-
 ### HTTP Request
 
-`GET https://bookingapi.pricing-coach.com/api/v1/residences/{name}`
+`GET https://bookingapi.pricing-coach.com/api/v1/londonist/residences/{id}`
 
 ### Query Parameters
 
 Parameter | Type | Required |  Description
 --------- | ------- | ------- | -----------
-name | string(path) | true | Residence name
+id | string | true | it's existing residence id
 
 ### Schema
 
 Name | type | example | description
 --------- | ------- | ----------- | -------
-
