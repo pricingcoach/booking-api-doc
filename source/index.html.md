@@ -230,7 +230,7 @@ Return matched reservations
     "reservationDetail": {
       "sellerReservationDetailId": "1",
       "student": {
-        "sellerStudentId": 1,
+        "sellerStudentId": 11,
         "gender": "FEMALE",
         "age": 20,
         "nationality": "UK"
