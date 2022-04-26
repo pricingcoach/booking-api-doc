@@ -46,7 +46,7 @@ It is the service that should be used to send a new reservation record. There is
       "age": 20,
       "nationality": "UK"
     },
-    "sellerResidenceId": "string",
+    "sellerBuildingId": "string",
     "sellerRoomTypeId": "string",
     "school": {
       "name": "Queen Mary University of London"
@@ -109,13 +109,13 @@ Parameter | Type | Required |  Description
 --------- | ------- | ------- | -----------
 NO_PARAMS 
 
-### Schema
+### Schema (Request)
 
 Name | type | example | description
 --------- | ------- | ----------- | -------
 sellerReservationId  | string  | 1 |  Id of reservation on seller system
 issueDate | string($date-time) | 2022-04-03T06:42:19.123Z | Timestamp at the time of the booking
-reservationDetail | ReservationDetail |  | Reservation details for every student
+reservationDetails | ReservationDetail |  | Reservation details for every student
 sellerReservationDetailId | string | 1 | Id of reservation detail on seller system.
 student | student |  | Reservation Student info
 sellerStudentId | string  | 1 | Id of student on seller system
@@ -149,6 +149,19 @@ agent | agent |  | Agent information that received the reservation record
 name | string | John Doe | Name of the agent
 source | string | Internal | Source of the agent
 responsibleZone | string | India | Responsible zone of the agent
+
+
+
+
+### Schema (Response)
+
+Name | type | example | description
+--------- | ------- | ----------- | -------
+message  | string  |   |  Response text
+status | string  |   |  Response text
+success | boolean   |   |  Response text
+timestamp | string($date-time)  | 2022-04-03T06:42:19.123Z  | Timestamp of the  eesponse time
+data | string  |   |  Response text
 
 
 ## Update reservation
