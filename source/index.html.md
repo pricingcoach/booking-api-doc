@@ -38,7 +38,7 @@ It is the service that should be used to send a new reservation record. There is
 {
   "sellerReservationId": "1",
   "issueDate": "2022-04-03T06:42:19.123Z",
-  "reservationDetail": {
+  "reservationDetails": {
     "sellerReservationDetailId": "1",
     "student": {
       "sellerStudentId": 1,
@@ -113,9 +113,42 @@ NO_PARAMS
 
 Name | type | example | description
 --------- | ------- | ----------- | -------
-sellerReservationId | string | 1 | Id of reservation on seller system
-issueDate | date | 2022-04-03T06:42:19.123Z | 
-reservationDetail | ReservationDetail |   | Reservation details for every student
+sellerReservationId  | string  | 1 |  Id of reservation on seller system
+issueDate | string($date-time) | 2022-04-03T06:42:19.123Z | Timestamp at the time of the booking
+reservationDetail | ReservationDetail |  | Reservation details for every student
+sellerReservationDetailId | string | 1 | Id of reservation detail on seller system.
+student | student |  | Reservation Student info
+sellerStudentId | string  | 1 | Id of student on seller system
+gender | string | FEMALE | Gender of the student
+age | 	integer($int32) | 20 | Age of the student"
+nationality | string | UK | Nationality of the student
+sellerBuildingId | string | 1 | Id of building on seller system.
+sellerRoomTypeId | string | 1 | Id of room type on seller system.
+reservationSchoolName | string | Queen Mary University of London | School name related with reservation
+reservationStatus | string | DEPOSIT | Status of the reservation
+invoiceStatus | string | UNPAID | Status of the invoice
+invoices | invoice |  | Invoices of the reservation
+invoiceId | string | 1 |  Id of invoice on seller system
+facilities | facility |  | Facilities related with reservation
+sellerReservationFacilityId | string | 1 | Id of the building facility on seller system.
+name | string | Double bed (appr. 135cm*190cm) | Name of the building facility 
+price | number | example: 39 ; default: 0 | Price of the building facility 
+depositPrice | number | 300 | Deposit price of the reservation
+depositPaidAmount | number | 255 | Paid amount of the deposit 
+totalPaidAmount | number | 500 | Paid amount of the price
+totalPrice | number | 500 | Price of the reservation
+totalRoomPrice | number | 400 | Total room price of the reservation
+totalFacilityPrice | number | 300 | Total facility price of the reservation
+refundAmount | number | 300 | Refund amount
+plannedCheckIn | string($date-time) | 2022-04-03T06:42:19.123Z | Planned Check-In timestamp
+plannedCheckOut | string($date-time) | 2022-04-03T06:42:19.123Z | Planned Check-Out timestamp
+cancelDate | string($date-time) | 2022-04-03T06:42:19.123Z | Timestamp of the Cancellation 
+checkIn | string($date-time) | 2022-04-03T06:42:19.123Z | Actual Check-In timestamp
+checkOut | string($date-time) | 2022-04-03T06:42:19.123Z | Actual Check-Out timestamp
+agent | agent |  | Agent information that received the reservation record
+name | string | John Doe | Name of the agent
+source | string | Internal | Source of the agent
+responsibleZone | string | India | Responsible zone of the agent
 
 
 ## Update reservation
@@ -136,11 +169,8 @@ It is the service that should be used to update a reservation record. There is n
       "age": 20,
       "nationality": "UK"
     },
-    "sellerResidenceId": "string",
+    "sellerBuildingId": "string",
     "sellerRoomTypeId": "string",
-    "school": {
-      "name": "Queen Mary University of London"
-    },
     "reservationSchoolName": "Queen Mary University of London",
     "reservationStatus": "DEPOSIT",
     "invoiceStatus": "UNPAID",
