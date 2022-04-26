@@ -310,8 +310,9 @@ It is the service that should be used to pull all reservation records for a cert
 
 > Response:
 
+
 ```json
-  {
+{
   "sellerReservationId": "1",
   "issueDate": "2022-04-03T06:42:19.123Z",
   "reservationDetails": {
