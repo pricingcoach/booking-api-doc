@@ -23,7 +23,7 @@ meta:
 
 Welcome to the Pricing-Coach API Documentation! 
 
-Pricing-Coach API is a communication platform that allows sending and receiving information about residences, reservations and prices.
+Pricing-Coach API is a communication platform that allows sending and receiving information about buildings, reservations and prices.
 
 # Reservation Operation
 
@@ -489,11 +489,11 @@ timestamp | string($date-time)  | 2022-04-03T06:42:19.123Z  | Timestamp of the  
 data | string  |   |  
 
 
-# Residence Operation
-It is used to return information about residences, properties of residences, room types of residences, properties of room types and prices according to weeks.
+# Building Operation
+It is used to return information about buildings, properties of buildings, room types of buildings, properties of room types and prices according to weeks.
 
-## Get all residence 
-It is the service that should be used to get all information about residences and room types. There is no need to enter any parameters when calling this service.
+## Get all building 
+It is the service that should be used to get all information about buildings and room types. There is no need to enter any parameters when calling this service.
 
 **It is expected to be developed by the seller system. Expected data structure is exemplified.**
 
@@ -577,7 +577,7 @@ It was developed to be run once for the first integration.
 
 ### HTTP Request
 
-`GET https://bookingapi.pricing-coach.com/api/v1/londonist/residences`
+`GET https://bookingapi.pricing-coach.com/api/v1/londonist/buildings`
 
 ### Query Parameters
 
@@ -631,8 +631,8 @@ price | number | example: 49 ; default: 0 | Building facility price
 
 
 
-## Get residence by id 
-It is the service that should be used to get information of spesific residence with residence id, it should be called with residence id value as parameter.
+## Get building by id 
+It is the service that should be used to get information of spesific building with building id, it should be called with building id value as parameter.
 
 **It is expected to be developed by the seller system. Expected data structure is exemplified.**
 
@@ -712,13 +712,13 @@ It is the service that should be used to get information of spesific residence w
 
 ### HTTP Request
 
-`GET https://bookingapi.pricing-coach.com/api/v1/londonist/residences/{id}`
+`GET https://bookingapi.pricing-coach.com/api/v1/londonist/buildings/{id}`
 
 ### Query Parameters
 
 Parameter | Type | Required |  Description
 --------- | ------- | ------- | -----------
-id | string | true | it's existing residence id
+id | string | true | it's existing building id
 
 
 ### Schema (Response)
