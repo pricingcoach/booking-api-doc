@@ -377,44 +377,46 @@
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"sellerReservationId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"issueDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-03T06:42:19.123Z"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"reservationDetails"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"sellerReservationDetailId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"student"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"sellerStudentId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"gender"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FEMALE"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"age"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"nationality"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UK"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nl">"sellerBuildingId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"sellerRoomTypeId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"reservationSchoolName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Queen Mary University of London"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"reservationStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEPOSIT"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"invoiceStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UNPAID"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"invoices"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"invoiceId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12345"</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="nl">"facilities"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"sellerReservationFacilityId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Double bed (appr. 135cm*190cm)"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">39</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="nl">"depositPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"depositPaidAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"totalPaidAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"totalPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"totalRoomPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"totalFacilityPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"refundAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"plannedCheckIn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-23T19:57:54.220Z"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"plannedCheckOut"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-23T19:57:54.220Z"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cancelDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-23T19:57:54.220Z"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"checkIn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-23T19:57:54.220Z"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"checkOut"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-23T19:57:54.220Z"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"reservationDetails"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"sellerReservationDetailId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"depositPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"depositPaidAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"totalPaidAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"totalPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"totalRoomPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"totalFacilityPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"refundAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"plannedCheckIn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-26T03:16:36.206Z"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"plannedCheckOut"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-26T03:16:36.206Z"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"cancelDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-26T03:16:36.206Z"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"checkIn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-26T03:16:36.206Z"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"checkOut"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-26T03:16:36.206Z"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"reservationStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEPOSIT"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"sellerBuildingId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"sellerRoomTypeId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"reservationSchoolName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Queen Mary University of London"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"student"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"sellerStudentId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"gender"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FEMALE"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"age"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"nationality"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UK"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"invoiceStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UNPAID"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"invoices"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"invoiceId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12345"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nl">"facilities"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"sellerReservationFacilityId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Double bed (appr. 135cm*190cm)"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">39</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
   </span><span class="nl">"agent"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A Agent"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A Source"</span><span class="p">,</span><span class="w">
@@ -703,7 +705,7 @@
 <td>timestamp</td>
 <td>string($date-time)</td>
 <td>2022-04-03T06:42:19.123Z</td>
-<td>Timestamp of the  eesponse time</td>
+<td>Timestamp of the  response time</td>
 </tr>
 <tr>
 <td>data</td>
@@ -721,44 +723,46 @@
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"sellerReservationId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"issueDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-03T06:42:19.123Z"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"reservationDetail"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"sellerReservationDetailId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"student"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"sellerStudentId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"gender"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FEMALE"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"age"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"nationality"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UK"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nl">"sellerBuildingId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"sellerRoomTypeId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"reservationSchoolName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Queen Mary University of London"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"reservationStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEPOSIT"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"invoiceStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UNPAID"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"invoices"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"invoiceId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12345"</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="nl">"facilities"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"sellerReservationFacilityId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Double bed (appr. 135cm*190cm)"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">39</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="nl">"depositPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"depositPaidAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"totalPaidAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"totalPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"totalRoomPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"totalFacilityPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"refundAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"plannedCheckIn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-23T20:09:37.559Z"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"plannedCheckOut"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-23T20:09:37.559Z"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cancelDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-23T20:09:37.559Z"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"checkIn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-23T20:09:37.559Z"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"checkOut"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-23T20:09:37.559Z"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"reservationDetails"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"sellerReservationDetailId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"depositPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"depositPaidAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"totalPaidAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"totalPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"totalRoomPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"totalFacilityPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"refundAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"plannedCheckIn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-26T03:16:36.206Z"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"plannedCheckOut"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-26T03:16:36.206Z"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"cancelDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-26T03:16:36.206Z"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"checkIn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-26T03:16:36.206Z"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"checkOut"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-04-26T03:16:36.206Z"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"reservationStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEPOSIT"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"sellerBuildingId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"sellerRoomTypeId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"reservationSchoolName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Queen Mary University of London"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"student"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"sellerStudentId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"gender"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FEMALE"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"age"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"nationality"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UK"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"invoiceStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UNPAID"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"invoices"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"invoiceId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12345"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nl">"facilities"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"sellerReservationFacilityId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Double bed (appr. 135cm*190cm)"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">39</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
   </span><span class="nl">"agent"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A Agent"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A Source"</span><span class="p">,</span><span class="w">
@@ -1047,7 +1051,7 @@
 <td>timestamp</td>
 <td>string($date-time)</td>
 <td>2022-04-03T06:42:19.123Z</td>
-<td>Timestamp of the  eesponse time</td>
+<td>Timestamp of the  response time</td>
 </tr>
 <tr>
 <td>data</td>
@@ -1057,7 +1061,7 @@
 </tr>
 </tbody></table>
 <h1 id='londonist-reservation-information'>Londonist Reservation Information</h1>
-<p>It is the service that should be used to pull all the reservation records  in the otherside system. It is expected to be developed by the otherside system. Expected data structure is exemplified. </p>
+<p>It is the service that should be used to pull all the reservation records  in the seller system. It is expected to be developed by the seller system. Expected data structure is exemplified. </p>
 
 <p>It was developed to be run once for the first integration.</p>
 <h2 id='get-reservation-information'>Get Reservation Information</h2>
@@ -1158,9 +1162,11 @@
 </thead><tbody>
 </tbody></table>
 <h1 id='dynamic-pricing-operation'>Dynamic Pricing Operation</h1>
-<p>New prices generated by dynamic pricing algorithm are sent to the otherside system.</p>
+<p>New prices generated by dynamic pricing algorithm are sent to the seller system.</p>
 <h2 id='room-type-price-update-simulate-for-londonist'>Room type price update (Simulate for Londonist)</h2>
 <p>It is the service that should be used to update the price of spesific residence and room type for the specified dates. There is no need to enter any parameters when calling this service.</p>
+
+<p>It is expected to be developed by the seller system. Expected data structure is exemplified.</p>
 
 <blockquote>
 <p>Request:</p>
@@ -1227,6 +1233,8 @@
 <p>It is used to return information about residences, properties of residences, room types of residences, properties of room types and prices according to weeks.</p>
 <h2 id='get-all-residence'>Get all residence</h2>
 <p>It is the service that should be used to get all information about residences and room types. There is no need to enter any parameters when calling this service.</p>
+
+<p>It is expected to be developed by the seller system. Expected data structure is exemplified.</p>
 
 <p>It was developed to be run once for the first integration.</p>
 
@@ -1329,6 +1337,8 @@
 </tbody></table>
 <h2 id='get-residence-by-id'>Get residence by id</h2>
 <p>It is the service that should be used to get information of spesific residence with residence id, it should be called with residence id value as parameter.</p>
+
+<p>It is expected to be developed by the seller system. Expected data structure is exemplified.</p>
 
 <blockquote>
 <p>Request:</p>
