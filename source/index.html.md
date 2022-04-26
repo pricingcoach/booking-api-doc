@@ -303,10 +303,7 @@ It was developed to be run once for the first integration.
 ##  Get Reservation Information
 It is the service that should be used to pull all reservation records for a certain year and month. For this reason, it should be called with year and month values as parameters.
 
-> Request:
-```json
 
-```
 
 > Request:
 
