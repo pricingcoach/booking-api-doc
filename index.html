@@ -343,13 +343,13 @@
               </ul>
           </li>
           <li>
-            <a href="#residence-operation" class="toc-h1 toc-link" data-title="Residence Operation">Residence Operation</a>
+            <a href="#building-operation" class="toc-h1 toc-link" data-title="Building Operation">Building Operation</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-residence" class="toc-h2 toc-link" data-title="Get all residence">Get all residence</a>
+                    <a href="#get-all-building" class="toc-h2 toc-link" data-title="Get all building">Get all building</a>
                   </li>
                   <li>
-                    <a href="#get-residence-by-id" class="toc-h2 toc-link" data-title="Get residence by id">Get residence by id</a>
+                    <a href="#get-building-by-id" class="toc-h2 toc-link" data-title="Get building by id">Get building by id</a>
                   </li>
               </ul>
           </li>
@@ -367,7 +367,7 @@
         <h1 id='booking-api-documentation'>Booking API Documentation</h1>
 <p>Welcome to the Pricing-Coach API Documentation! </p>
 
-<p>Pricing-Coach API is a communication platform that allows sending and receiving information about residences, reservations and prices.</p>
+<p>Pricing-Coach API is a communication platform that allows sending and receiving information about buildings, reservations and prices.</p>
 <h1 id='reservation-operation'>Reservation Operation</h1><h2 id='add-a-new-reservation'>Add a new reservation</h2>
 <p>It is the service that should be used to send a new reservation record. There is no need to enter any parameters when calling this service.</p>
 
@@ -1527,10 +1527,10 @@
 <td></td>
 </tr>
 </tbody></table>
-<h1 id='residence-operation'>Residence Operation</h1>
-<p>It is used to return information about residences, properties of residences, room types of residences, properties of room types and prices according to weeks.</p>
-<h2 id='get-all-residence'>Get all residence</h2>
-<p>It is the service that should be used to get all information about residences and room types. There is no need to enter any parameters when calling this service.</p>
+<h1 id='building-operation'>Building Operation</h1>
+<p>It is used to return information about buildings, properties of buildings, room types of buildings, properties of room types and prices according to weeks.</p>
+<h2 id='get-all-building'>Get all building</h2>
+<p>It is the service that should be used to get all information about buildings and room types. There is no need to enter any parameters when calling this service.</p>
 
 <p><strong>It is expected to be developed by the seller system. Expected data structure is exemplified.</strong></p>
 
@@ -1610,7 +1610,7 @@
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre></div><h3 id='http-request-5'>HTTP Request</h3>
-<p><code>GET https://bookingapi.pricing-coach.com/api/v1/londonist/residences</code></p>
+<p><code>GET https://bookingapi.pricing-coach.com/api/v1/londonist/buildings</code></p>
 <h3 id='query-parameters-5'>Query Parameters</h3>
 <table><thead>
 <tr>
@@ -1867,8 +1867,8 @@
 <td>Building facility price</td>
 </tr>
 </tbody></table>
-<h2 id='get-residence-by-id'>Get residence by id</h2>
-<p>It is the service that should be used to get information of spesific residence with residence id, it should be called with residence id value as parameter.</p>
+<h2 id='get-building-by-id'>Get building by id</h2>
+<p>It is the service that should be used to get information of spesific building with building id, it should be called with building id value as parameter.</p>
 
 <p><strong>It is expected to be developed by the seller system. Expected data structure is exemplified.</strong></p>
 
@@ -1944,7 +1944,7 @@
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div><h3 id='http-request-6'>HTTP Request</h3>
-<p><code>GET https://bookingapi.pricing-coach.com/api/v1/londonist/residences/{id}</code></p>
+<p><code>GET https://bookingapi.pricing-coach.com/api/v1/londonist/buildings/{id}</code></p>
 <h3 id='query-parameters-6'>Query Parameters</h3>
 <table><thead>
 <tr>
@@ -1958,7 +1958,7 @@
 <td>id</td>
 <td>string</td>
 <td>true</td>
-<td>it&#39;s existing residence id</td>
+<td>it&#39;s existing building id</td>
 </tr>
 </tbody></table>
 <h3 id='schema-response-6'>Schema (Response)</h3>
