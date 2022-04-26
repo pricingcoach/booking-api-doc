@@ -38,8 +38,7 @@ It is the service that should be used to send a new reservation record. There is
 {
   "sellerReservationId": "1",
   "issueDate": "2022-04-03T06:42:19.123Z",
-  "reservationDetails": [
-    {
+  "reservationDetails": {
       "sellerReservationDetailId": "1",
       "depositPrice": 0,
       "depositPaidAmount": 0,
@@ -76,8 +75,7 @@ It is the service that should be used to send a new reservation record. There is
           "price": 39
         }
       ]
-    }
-  ],
+    },
   "agent": {
     "name": "A Agent",
     "source": "A Source",
@@ -173,8 +171,7 @@ It is the service that should be used to update a reservation record. There is n
 {
   "sellerReservationId": "1",
   "issueDate": "2022-04-03T06:42:19.123Z",
-  "reservationDetails": [
-    {
+  "reservationDetails": {
       "sellerReservationDetailId": "1",
       "depositPrice": 0,
       "depositPaidAmount": 0,
@@ -211,8 +208,7 @@ It is the service that should be used to update a reservation record. There is n
           "price": 39
         }
       ]
-    }
-  ],
+    },
   "agent": {
     "name": "A Agent",
     "source": "A Source",
