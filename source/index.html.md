@@ -308,8 +308,7 @@ It is the service that should be used to pull all reservation records for a cert
 
 ```
 
-> Response:
-
+> Request:
 
 ```json
 {
@@ -360,6 +359,7 @@ It is the service that should be used to pull all reservation records for a cert
   }
 }
 ```
+
 
 ### HTTP Request
 
