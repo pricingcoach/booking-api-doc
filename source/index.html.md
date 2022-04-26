@@ -38,44 +38,46 @@ It is the service that should be used to send a new reservation record. There is
 {
   "sellerReservationId": "1",
   "issueDate": "2022-04-03T06:42:19.123Z",
-  "reservationDetails": {
-    "sellerReservationDetailId": "1",
-    "student": {
-      "sellerStudentId": 1,
-      "gender": "FEMALE",
-      "age": 20,
-      "nationality": "UK"
-    },
-    "sellerBuildingId": "string",
-    "sellerRoomTypeId": "string",
-    "reservationSchoolName": "Queen Mary University of London",
-    "reservationStatus": "DEPOSIT",
-    "invoiceStatus": "UNPAID",
-    "invoices": [
-      {
-        "invoiceId": "12345"
-      }
-    ],
-    "facilities": [
-      {
-        "sellerReservationFacilityId": "1",
-        "name": "Double bed (appr. 135cm*190cm)",
-        "price": 39
-      }
-    ],
-    "depositPrice": 0,
-    "depositPaidAmount": 0,
-    "totalPaidAmount": 0,
-    "totalPrice": 0,
-    "totalRoomPrice": 0,
-    "totalFacilityPrice": 0,
-    "refundAmount": 0,
-    "plannedCheckIn": "2022-04-23T19:57:54.220Z",
-    "plannedCheckOut": "2022-04-23T19:57:54.220Z",
-    "cancelDate": "2022-04-23T19:57:54.220Z",
-    "checkIn": "2022-04-23T19:57:54.220Z",
-    "checkOut": "2022-04-23T19:57:54.220Z"
-  },
+  "reservationDetails": [
+    {
+      "sellerReservationDetailId": "1",
+      "depositPrice": 0,
+      "depositPaidAmount": 0,
+      "totalPaidAmount": 0,
+      "totalPrice": 0,
+      "totalRoomPrice": 0,
+      "totalFacilityPrice": 0,
+      "refundAmount": 0,
+      "plannedCheckIn": "2022-04-26T03:16:36.206Z",
+      "plannedCheckOut": "2022-04-26T03:16:36.206Z",
+      "cancelDate": "2022-04-26T03:16:36.206Z",
+      "checkIn": "2022-04-26T03:16:36.206Z",
+      "checkOut": "2022-04-26T03:16:36.206Z",
+      "reservationStatus": "DEPOSIT",
+      "sellerBuildingId": "string",
+      "sellerRoomTypeId": "string",
+      "reservationSchoolName": "Queen Mary University of London",
+      "student": {
+        "sellerStudentId": 1,
+        "gender": "FEMALE",
+        "age": 20,
+        "nationality": "UK"
+      },
+      "invoiceStatus": "UNPAID",
+      "invoices": [
+        {
+          "invoiceId": "12345"
+        }
+      ],
+      "facilities": [
+        {
+          "sellerReservationFacilityId": "1",
+          "name": "Double bed (appr. 135cm*190cm)",
+          "price": 39
+        }
+      ]
+    }
+  ],
   "agent": {
     "name": "A Agent",
     "source": "A Source",
@@ -157,7 +159,7 @@ Name | type | example | description
 message  | string  |   |  Response text
 status | string  |   |  Status text
 success | boolean   |   | Success status of the response 
-timestamp | string($date-time)  | 2022-04-03T06:42:19.123Z  | Timestamp of the  eesponse time
+timestamp | string($date-time)  | 2022-04-03T06:42:19.123Z  | Timestamp of the  response time
 data | string  |   |  
 
 
@@ -171,44 +173,46 @@ It is the service that should be used to update a reservation record. There is n
 {
   "sellerReservationId": "1",
   "issueDate": "2022-04-03T06:42:19.123Z",
-  "reservationDetail": {
-    "sellerReservationDetailId": "1",
-    "student": {
-      "sellerStudentId": 1,
-      "gender": "FEMALE",
-      "age": 20,
-      "nationality": "UK"
-    },
-    "sellerBuildingId": "string",
-    "sellerRoomTypeId": "string",
-    "reservationSchoolName": "Queen Mary University of London",
-    "reservationStatus": "DEPOSIT",
-    "invoiceStatus": "UNPAID",
-    "invoices": [
-      {
-        "invoiceId": "12345"
-      }
-    ],
-    "facilities": [
-      {
-        "sellerReservationFacilityId": "1",
-        "name": "Double bed (appr. 135cm*190cm)",
-        "price": 39
-      }
-    ],
-    "depositPrice": 0,
-    "depositPaidAmount": 0,
-    "totalPaidAmount": 0,
-    "totalPrice": 0,
-    "totalRoomPrice": 0,
-    "totalFacilityPrice": 0,
-    "refundAmount": 0,
-    "plannedCheckIn": "2022-04-23T20:09:37.559Z",
-    "plannedCheckOut": "2022-04-23T20:09:37.559Z",
-    "cancelDate": "2022-04-23T20:09:37.559Z",
-    "checkIn": "2022-04-23T20:09:37.559Z",
-    "checkOut": "2022-04-23T20:09:37.559Z"
-  },
+  "reservationDetails": [
+    {
+      "sellerReservationDetailId": "1",
+      "depositPrice": 0,
+      "depositPaidAmount": 0,
+      "totalPaidAmount": 0,
+      "totalPrice": 0,
+      "totalRoomPrice": 0,
+      "totalFacilityPrice": 0,
+      "refundAmount": 0,
+      "plannedCheckIn": "2022-04-26T03:16:36.206Z",
+      "plannedCheckOut": "2022-04-26T03:16:36.206Z",
+      "cancelDate": "2022-04-26T03:16:36.206Z",
+      "checkIn": "2022-04-26T03:16:36.206Z",
+      "checkOut": "2022-04-26T03:16:36.206Z",
+      "reservationStatus": "DEPOSIT",
+      "sellerBuildingId": "string",
+      "sellerRoomTypeId": "string",
+      "reservationSchoolName": "Queen Mary University of London",
+      "student": {
+        "sellerStudentId": 1,
+        "gender": "FEMALE",
+        "age": 20,
+        "nationality": "UK"
+      },
+      "invoiceStatus": "UNPAID",
+      "invoices": [
+        {
+          "invoiceId": "12345"
+        }
+      ],
+      "facilities": [
+        {
+          "sellerReservationFacilityId": "1",
+          "name": "Double bed (appr. 135cm*190cm)",
+          "price": 39
+        }
+      ]
+    }
+  ],
   "agent": {
     "name": "A Agent",
     "source": "A Source",
@@ -291,12 +295,12 @@ Name | type | example | description
 message  | string  |   |  Response text
 status | string  |   |  Status text
 success | boolean   |   | Success status of the response 
-timestamp | string($date-time)  | 2022-04-03T06:42:19.123Z  | Timestamp of the  eesponse time
+timestamp | string($date-time)  | 2022-04-03T06:42:19.123Z  | Timestamp of the  response time
 data | string  |   |  
 
 
 # Londonist Reservation Information
-It is the service that should be used to pull all the reservation records  in the otherside system. It is expected to be developed by the otherside system. Expected data structure is exemplified. 
+It is the service that should be used to pull all the reservation records  in the seller system. It is expected to be developed by the seller system. Expected data structure is exemplified. 
 
 It was developed to be run once for the first integration.
 
@@ -383,10 +387,14 @@ Name | type | example | description
 
 
 # Dynamic Pricing Operation
-New prices generated by dynamic pricing algorithm are sent to the otherside system.
+New prices generated by dynamic pricing algorithm are sent to the seller system.
 
 ##  Room type price update (Simulate for Londonist)
 It is the service that should be used to update the price of spesific residence and room type for the specified dates. There is no need to enter any parameters when calling this service.
+
+It is expected to be developed by the seller system. Expected data structure is exemplified.
+
+
 
 > Request:
 
@@ -440,6 +448,8 @@ It is used to return information about residences, properties of residences, roo
 
 ## Get all residence 
 It is the service that should be used to get all information about residences and room types. There is no need to enter any parameters when calling this service.
+
+It is expected to be developed by the seller system. Expected data structure is exemplified.
 
 It was developed to be run once for the first integration.
 
@@ -537,6 +547,8 @@ Name | type | example | description
 
 ## Get residence by id 
 It is the service that should be used to get information of spesific residence with residence id, it should be called with residence id value as parameter.
+
+It is expected to be developed by the seller system. Expected data structure is exemplified.
 
 > Request:
 
