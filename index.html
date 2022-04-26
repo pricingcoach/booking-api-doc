@@ -387,9 +387,6 @@
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"sellerBuildingId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"sellerRoomTypeId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"school"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Queen Mary University of London"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
     </span><span class="nl">"reservationSchoolName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Queen Mary University of London"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"reservationStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEPOSIT"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"invoiceStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UNPAID"</span><span class="p">,</span><span class="w">
@@ -694,13 +691,13 @@
 <td>status</td>
 <td>string</td>
 <td></td>
-<td>Response text</td>
+<td>Status text</td>
 </tr>
 <tr>
 <td>success</td>
 <td>boolean</td>
 <td></td>
-<td>Response text</td>
+<td>Success status of the response</td>
 </tr>
 <tr>
 <td>timestamp</td>
@@ -712,7 +709,7 @@
 <td>data</td>
 <td>string</td>
 <td></td>
-<td>Response text</td>
+<td></td>
 </tr>
 </tbody></table>
 <h2 id='update-reservation'>Update reservation</h2>
@@ -793,7 +790,7 @@
 </tbody></table>
 
 <p>NO_PARAMS </p>
-<h3 id='schema'>Schema</h3>
+<h3 id='schema-request-2'>Schema (Request)</h3>
 <table><thead>
 <tr>
 <th>Name</th>
@@ -810,15 +807,253 @@
 </tr>
 <tr>
 <td>issueDate</td>
-<td>date</td>
+<td>string($date-time)</td>
 <td>2022-04-03T06:42:19.123Z</td>
-<td></td>
+<td>Timestamp at the time of the booking</td>
 </tr>
 <tr>
-<td>reservationDetail</td>
+<td>reservationDetails</td>
 <td>ReservationDetail</td>
 <td></td>
 <td>Reservation details for every student</td>
+</tr>
+<tr>
+<td>sellerReservationDetailId</td>
+<td>string</td>
+<td>1</td>
+<td>Id of reservation detail on seller system.</td>
+</tr>
+<tr>
+<td>student</td>
+<td>student</td>
+<td></td>
+<td>Reservation Student info</td>
+</tr>
+<tr>
+<td>sellerStudentId</td>
+<td>string</td>
+<td>1</td>
+<td>Id of student on seller system</td>
+</tr>
+<tr>
+<td>gender</td>
+<td>string</td>
+<td>FEMALE</td>
+<td>Gender of the student</td>
+</tr>
+<tr>
+<td>age</td>
+<td>integer($int32)</td>
+<td>20</td>
+<td>Age of the student&quot;</td>
+</tr>
+<tr>
+<td>nationality</td>
+<td>string</td>
+<td>UK</td>
+<td>Nationality of the student</td>
+</tr>
+<tr>
+<td>sellerBuildingId</td>
+<td>string</td>
+<td>1</td>
+<td>Id of building on seller system.</td>
+</tr>
+<tr>
+<td>sellerRoomTypeId</td>
+<td>string</td>
+<td>1</td>
+<td>Id of room type on seller system.</td>
+</tr>
+<tr>
+<td>reservationSchoolName</td>
+<td>string</td>
+<td>Queen Mary University of London</td>
+<td>School name related with reservation</td>
+</tr>
+<tr>
+<td>reservationStatus</td>
+<td>string</td>
+<td>DEPOSIT</td>
+<td>Status of the reservation</td>
+</tr>
+<tr>
+<td>invoiceStatus</td>
+<td>string</td>
+<td>UNPAID</td>
+<td>Status of the invoice</td>
+</tr>
+<tr>
+<td>invoices</td>
+<td>invoice</td>
+<td></td>
+<td>Invoices of the reservation</td>
+</tr>
+<tr>
+<td>invoiceId</td>
+<td>string</td>
+<td>1</td>
+<td>Id of invoice on seller system</td>
+</tr>
+<tr>
+<td>facilities</td>
+<td>facility</td>
+<td></td>
+<td>Facilities related with reservation</td>
+</tr>
+<tr>
+<td>sellerReservationFacilityId</td>
+<td>string</td>
+<td>1</td>
+<td>Id of the building facility on seller system.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>Double bed (appr. 135cm*190cm)</td>
+<td>Name of the building facility</td>
+</tr>
+<tr>
+<td>price</td>
+<td>number</td>
+<td>example: 39 ; default: 0</td>
+<td>Price of the building facility</td>
+</tr>
+<tr>
+<td>depositPrice</td>
+<td>number</td>
+<td>300</td>
+<td>Deposit price of the reservation</td>
+</tr>
+<tr>
+<td>depositPaidAmount</td>
+<td>number</td>
+<td>255</td>
+<td>Paid amount of the deposit</td>
+</tr>
+<tr>
+<td>totalPaidAmount</td>
+<td>number</td>
+<td>500</td>
+<td>Paid amount of the price</td>
+</tr>
+<tr>
+<td>totalPrice</td>
+<td>number</td>
+<td>500</td>
+<td>Price of the reservation</td>
+</tr>
+<tr>
+<td>totalRoomPrice</td>
+<td>number</td>
+<td>400</td>
+<td>Total room price of the reservation</td>
+</tr>
+<tr>
+<td>totalFacilityPrice</td>
+<td>number</td>
+<td>300</td>
+<td>Total facility price of the reservation</td>
+</tr>
+<tr>
+<td>refundAmount</td>
+<td>number</td>
+<td>300</td>
+<td>Refund amount</td>
+</tr>
+<tr>
+<td>plannedCheckIn</td>
+<td>string($date-time)</td>
+<td>2022-04-03T06:42:19.123Z</td>
+<td>Planned Check-In timestamp</td>
+</tr>
+<tr>
+<td>plannedCheckOut</td>
+<td>string($date-time)</td>
+<td>2022-04-03T06:42:19.123Z</td>
+<td>Planned Check-Out timestamp</td>
+</tr>
+<tr>
+<td>cancelDate</td>
+<td>string($date-time)</td>
+<td>2022-04-03T06:42:19.123Z</td>
+<td>Timestamp of the Cancellation</td>
+</tr>
+<tr>
+<td>checkIn</td>
+<td>string($date-time)</td>
+<td>2022-04-03T06:42:19.123Z</td>
+<td>Actual Check-In timestamp</td>
+</tr>
+<tr>
+<td>checkOut</td>
+<td>string($date-time)</td>
+<td>2022-04-03T06:42:19.123Z</td>
+<td>Actual Check-Out timestamp</td>
+</tr>
+<tr>
+<td>agent</td>
+<td>agent</td>
+<td></td>
+<td>Agent information that received the reservation record</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>John Doe</td>
+<td>Name of the agent</td>
+</tr>
+<tr>
+<td>source</td>
+<td>string</td>
+<td>Internal</td>
+<td>Source of the agent</td>
+</tr>
+<tr>
+<td>responsibleZone</td>
+<td>string</td>
+<td>India</td>
+<td>Responsible zone of the agent</td>
+</tr>
+</tbody></table>
+<h3 id='schema-response-2'>Schema (Response)</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>type</th>
+<th>example</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>message</td>
+<td>string</td>
+<td></td>
+<td>Response text</td>
+</tr>
+<tr>
+<td>status</td>
+<td>string</td>
+<td></td>
+<td>Status text</td>
+</tr>
+<tr>
+<td>success</td>
+<td>boolean</td>
+<td></td>
+<td>Success status of the response</td>
+</tr>
+<tr>
+<td>timestamp</td>
+<td>string($date-time)</td>
+<td>2022-04-03T06:42:19.123Z</td>
+<td>Timestamp of the  eesponse time</td>
+</tr>
+<tr>
+<td>data</td>
+<td>string</td>
+<td></td>
+<td></td>
 </tr>
 </tbody></table>
 <h1 id='londonist-reservation-information'>Londonist Reservation Information</h1>
@@ -912,7 +1147,7 @@
 <td>month information</td>
 </tr>
 </tbody></table>
-<h3 id='schema-2'>Schema</h3>
+<h3 id='schema'>Schema</h3>
 <table><thead>
 <tr>
 <th>Name</th>
@@ -978,7 +1213,7 @@
 <td>month information</td>
 </tr>
 </tbody></table>
-<h3 id='schema-3'>Schema</h3>
+<h3 id='schema-2'>Schema</h3>
 <table><thead>
 <tr>
 <th>Name</th>
@@ -1082,7 +1317,7 @@
 </tbody></table>
 
 <p>NO_PARAMS </p>
-<h3 id='schema-4'>Schema</h3>
+<h3 id='schema-3'>Schema</h3>
 <table><thead>
 <tr>
 <th>Name</th>
@@ -1184,7 +1419,7 @@
 <td>it&#39;s existing residence id</td>
 </tr>
 </tbody></table>
-<h3 id='schema-5'>Schema</h3>
+<h3 id='schema-4'>Schema</h3>
 <table><thead>
 <tr>
 <th>Name</th>
