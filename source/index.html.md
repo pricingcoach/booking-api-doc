@@ -150,6 +150,12 @@ cancelDate | string($date-time) | 2022-04-03T06:42:19.123Z | Timestamp of the Ca
 checkIn | string($date-time) | 2022-04-03T06:42:19.123Z | Actual Check-In timestamp
 checkOut | string($date-time) | 2022-04-03T06:42:19.123Z | Actual Check-Out timestamp
 agent | agent |  | Agent information that received the reservation record
+id | string | 1 | Id of the agent in the seller system
+name | string | John Doe | Name of the agent
+source | string | Internal | Source of the agent
+responsibleZone | string | India | Responsible zone of the agent
+account | account |  | Account information that received the reservation record
+id | string | 1 | Id of the account in the seller system
 name | string | John Doe | Name of the agent
 source | string | Internal | Source of the agent
 responsibleZone | string | India | Responsible zone of the agent
@@ -217,7 +223,14 @@ It is the service that should be used to update a reservation record. There is n
       ]
     },
   "agent": {
-    "name": "A Agent",
+    "id": "1",  
+    "name": "An Agent",
+    "source": "A Source",
+    "responsibleZone": "A Zone"
+  }
+    "account": {
+    "id": "1",  
+    "name": "An Account",
     "source": "A Source",
     "responsibleZone": "A Zone"
   }
@@ -284,9 +297,16 @@ cancelDate | string($date-time) | 2022-04-03T06:42:19.123Z | Timestamp of the Ca
 checkIn | string($date-time) | 2022-04-03T06:42:19.123Z | Actual Check-In timestamp
 checkOut | string($date-time) | 2022-04-03T06:42:19.123Z | Actual Check-Out timestamp
 agent | agent |  | Agent information that received the reservation record
+id | string | 1 | Id of the agent in the seller system
 name | string | John Doe | Name of the agent
 source | string | Internal | Source of the agent
 responsibleZone | string | India | Responsible zone of the agent
+account | account |  | Account information that received the reservation record
+id | string | 1 | Id of the account in the seller system
+name | string | John Doe | Name of the agent
+source | string | Internal | Source of the agent
+responsibleZone | string | India | Responsible zone of the agent
+
 
 
 
