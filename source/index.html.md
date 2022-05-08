@@ -156,9 +156,9 @@ source | string | Internal | Source of the agent
 responsibleZone | string | India | Responsible zone of the agent
 account | account |  | Account information that received the reservation record
 id | string | 1 | Id of the account in the seller system
-name | string | John Doe | Name of the agent
-source | string | Internal | Source of the agent
-responsibleZone | string | India | Responsible zone of the agent
+name | string | John Doe | Name of the account
+source | string | Internal | Source of the account
+responsibleZone | string | India | Responsible zone of the account
 
 
 
@@ -303,9 +303,9 @@ source | string | Internal | Source of the agent
 responsibleZone | string | India | Responsible zone of the agent
 account | account |  | Account information that received the reservation record
 id | string | 1 | Id of the account in the seller system
-name | string | John Doe | Name of the agent
-source | string | Internal | Source of the agent
-responsibleZone | string | India | Responsible zone of the agent
+name | string | John Doe | Name of the account
+source | string | Internal | Source of the account
+responsibleZone | string | India | Responsible zone of the account
 
 
 
