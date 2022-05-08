@@ -77,7 +77,14 @@ It is the service that should be used to send a new reservation record. There is
       ]
     },
   "agent": {
-    "name": "A Agent",
+    "id": "1",  
+    "name": "An Agent",
+    "source": "A Source",
+    "responsibleZone": "A Zone"
+  }
+    "account": {
+    "id": "1",  
+    "name": "An Account",
     "source": "A Source",
     "responsibleZone": "A Zone"
   }
