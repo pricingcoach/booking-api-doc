@@ -38,7 +38,8 @@ It is the service that should be used to send a new reservation record. There is
 {
   "sellerReservationId": "1",
   "issueDate": "2022-04-03T06:42:19.123Z",
-  "reservationDetails": {
+  "reservationDetails": [
+    {
       "sellerReservationDetailId": "1",
       "depositPrice": 0,
       "depositPaidAmount": 0,
@@ -76,6 +77,45 @@ It is the service that should be used to send a new reservation record. There is
         }
       ]
     },
+    {
+      "sellerReservationDetailId": "2",
+      "depositPrice": 0,
+      "depositPaidAmount": 0,
+      "totalPaidAmount": 0,
+      "totalPrice": 0,
+      "totalRoomPrice": 0,
+      "totalFacilityPrice": 0,
+      "refundAmount": 0,
+      "plannedCheckIn": "2022-04-26T03:16:36.206Z",
+      "plannedCheckOut": "2022-04-26T03:16:36.206Z",
+      "cancelDate": "2022-04-26T03:16:36.206Z",
+      "checkIn": "2022-04-26T03:16:36.206Z",
+      "checkOut": "2022-04-26T03:16:36.206Z",
+      "reservationStatus": "DEPOSIT",
+      "sellerBuildingId": "string",
+      "sellerRoomTypeId": "string",
+      "reservationSchoolName": "Queen Mary University of London",
+      "student": {
+        "sellerStudentId": 1,
+        "gender": "FEMALE",
+        "age": 20,
+        "nationality": "UK"
+      },
+      "invoiceStatus": "UNPAID",
+      "invoices": [
+        {
+          "12345"
+        }
+      ],
+      "facilities": [
+        {
+          "sellerReservationFacilityId": "1",
+          "name": "Double bed (appr. 135cm*190cm)",
+          "price": 39
+        }
+      ]
+    }
+  ],
   "agent": {
     "id": "1",  
     "name": "An Agent",
